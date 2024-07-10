@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+        <meta
+            name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <script src="main.js" defer></script>
+        <title>ROCK Paper Scissors</title>
+    </head>
+    <body>
+        <h1>Rock Paper Scissors</h1>
+
+        <div class="container">
+            <div class="score">
+                <div class="score-human">
+                    <div class="score-title">Human</div>
+                    <div class="score-num" id="human-score">0</div>
+                </div>
+                <div class="score-computer">
+                    <div class="score-title">Computer</div>
+                    <div class="score-num" id="computer-score">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="choices">
+                <div class="choice-paper">
+                    <button id="paper" onclick="getHumanChoice('paper')">
+                        <img src="images/paper.png" alt="paper" />
+                        <div class="choice-title">Paper</div>
+                    </button>
+                </div>
+
+                <div class="choice-scissors">
+                    <button id="scissors" onclick="getHumanChoice('scissors')">
+                        <img src="images/scissors.png" alt="scissors" />
+                        <div class="choice-title">scissors</div>
+                    </button>
+                </div>
+
+                <div class="choice-rock">
+                    <button id="rock" onclick="getHumanChoice('rock')">
+                        <img src="images/rock.png" alt="rock" />
+                        <div class="choice-title">rock</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="results-container">
+                <div class="results-title">
+                    Results:
+                    <div class="results" id="results">X</div>
+                </div>
+                <div class="played-container">
+                    <div class="human-container">
+                        <div class="human-title">Human</div>
+                        <div class="played">Played:</div>
+                        <div class="human-played">
+                            <img src="images/question.png" id="human-played" />
+                        </div>
+                    </div>
+                    <div class="computer-container">
+                        <div class="computer-title">Computer</div>
+                        <div class="played">Played:</div>
+                        <div class="computer-played">
+                            <img
+                                src="images/question.png"
+                                id="computer-played"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-container" id="modal">
+            <div class="game-over-modal">
+                <div class="final-result-say" id="final-result-say">Sample</div>
+                <button class="play-again" id="play-again" onclick="restart()">
+                    Play Again
+                </button>
+            </div>
+        </div>
+    </body>
+</html>

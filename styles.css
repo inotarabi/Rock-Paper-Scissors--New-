@@ -1,0 +1,139 @@
+@font-face {
+    font-family: pixel;
+    src: url(slkscr.ttf);
+}
+
+body {
+    background-color: rgb(226, 211, 0);
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: pixel;
+}
+
+img {
+    max-width: 200px;
+}
+
+button {
+    background-color: #35393c;
+    border: 5px solid rgba(91, 124, 153, 1);
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d4a017;
+    border: 5px solid black;
+    color: black;
+}
+
+button:active {
+    background-color: rgba(212, 160, 23, 0.7);
+    transform: scale(1.03);
+}
+
+.container {
+    margin: 0px;
+    padding: 0px;
+}
+
+.score {
+    display: flex;
+    justify-content: space-around;
+}
+
+.human-title,
+.computer-title,
+.score-title,
+.score-num,
+.results-title,
+.choice-title {
+    font-size: 24px;
+    font-family: pixel;
+    text-align: center;
+}
+
+.choices {
+    margin: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.choice-paper,
+.choice-scissors,
+.choice-rock {
+    display: flex;
+    flex-direction: column;
+}
+
+.played-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.played {
+    font-size: 24px;
+    font-family: pixel;
+    text-align: center;
+}
+
+.human-played,
+.computer-played {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-container {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    padding-top: 500px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(226, 211, 0);
+    background-color: rgba(226, 211, 0, 0.5);
+}
+
+.game-over-modal {
+    background-color: #35393c;
+    margin: auto;
+    padding: 20px;
+    width: 10%;
+    border-radius: 7px;
+
+    color: white;
+    font-size: 24px;
+    font-family: pixel;
+    text-align: center;
+}
+
+.play-again {
+    background-color: rgb(80, 82, 85);
+    border: 0;
+    color: white;
+    font-size: 24px;
+    font-family: pixel;
+    cursor: pointer;
+}
+
+.play-again:hover {
+    background-color: rgb(122, 122, 122);
+    border: 0;
+    color: white;
+}
+
+.play-again:active {
+    background-color: rgb(143, 143, 143);
+    transform: scale(1);
+}
