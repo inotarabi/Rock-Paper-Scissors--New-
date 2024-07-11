@@ -4,12 +4,32 @@ var computerScore = 0;
 let computerChoice;
 let humanChoice;
 
-let result = document.getElementById("results");
-let humanImage = document.getElementById("human-played");
-let computerImage = document.getElementById("computer-played");
-let finalResultDisplay = document.getElementById("final-result-say");
-let modal = document.getElementById("modal");
-let buttonPlayAgain = document.getElementById("play-again");
+let clickSound = new Audio("sounds/click.mp3");
+
+const result = document.getElementById("results");
+const humanImage = document.getElementById("human-played");
+const computerImage = document.getElementById("computer-played");
+const finalResultDisplay = document.getElementById("final-result-say");
+const modal = document.getElementById("modal");
+const buttonPlayAgain = document.getElementById("play-again");
+const paperButton = document.getElementById("paper");
+const scissorsButton = document.getElementById("scissors");
+const rockButton = document.getElementById("rock");
+
+paperButton.addEventListener("click", () => {
+    clickSound.play();
+    getHumanChoice("paper");
+});
+
+scissorsButton.addEventListener("click", () => {
+    clickSound.play();
+    getHumanChoice("scissors");
+});
+
+rockButton.addEventListener("click", () => {
+    clickSound.play();
+    getHumanChoice("rock");
+});
 
 function getComputerChoice() {
     computerChoice = Math.random();
